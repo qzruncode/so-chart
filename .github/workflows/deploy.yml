@@ -36,6 +36,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build preview site
+        env:
+          VITE_BASE_PATH: /so-chart/
         run: pnpm run preview:build
 
       - name: Preserve SPA routes on GitHub Pages
