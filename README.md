@@ -90,6 +90,8 @@ export function LineChart() {
 
 预览站从各包的 `demo/manifest.ts` 自动聚合示例和说明。新增或修改图表包时，请同步更新对应的示例、说明和 manifest。
 
+公开预览站：[qzruncode.github.io/so-chart](https://qzruncode.github.io/so-chart/)。`prod` 分支的每次更新都会通过 GitHub Actions 构建并部署到 GitHub Pages。
+
 单独启动某个包的 Demo：
 
 ```bash
