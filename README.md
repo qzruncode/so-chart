@@ -12,7 +12,7 @@
 
 ## 快速开始
 
-环境要求：Node.js `>=20.19 <26`，pnpm 9。
+环境要求：Node.js `>=22.22.2 <26`，pnpm 9。
 
 ```bash
 pnpm install --frozen-lockfile
@@ -65,22 +65,22 @@ export function LineChart() {
 
 ## 图表包
 
-| 包 | 类型 |
-| --- | --- |
-| `@so-chart/bar` | 柱状图 |
-| `@so-chart/calendar` | 日历图 |
-| `@so-chart/guage` | 仪表图 |
-| `@so-chart/line` | 折线图 |
-| `@so-chart/pie` | 饼图 |
-| `@so-chart/point` | 散点图 |
-| `@so-chart/progress` | 进度图和滑块 |
-| `@so-chart/radar` | 雷达图 |
-| `@so-chart/sankey` | 桑基图 |
-| `@so-chart/tree` | 树图和流程图 |
-| `@so-chart/tabs` | 图表内置标签栏 |
-| `@so-chart/tooltip` | 共享 Tooltip 和 mark 绘制 |
-| `@so-chart/types` | 共享 TypeScript 类型 |
-| `@so-chart/utils` | 共享工具 |
+| 包                   | 类型                      |
+| -------------------- | ------------------------- |
+| `@so-chart/bar`      | 柱状图                    |
+| `@so-chart/calendar` | 日历图                    |
+| `@so-chart/guage`    | 仪表图                    |
+| `@so-chart/line`     | 折线图                    |
+| `@so-chart/pie`      | 饼图                      |
+| `@so-chart/point`    | 散点图                    |
+| `@so-chart/progress` | 进度图和滑块              |
+| `@so-chart/radar`    | 雷达图                    |
+| `@so-chart/sankey`   | 桑基图                    |
+| `@so-chart/tree`     | 树图和流程图              |
+| `@so-chart/tabs`     | 图表内置标签栏            |
+| `@so-chart/tooltip`  | 共享 Tooltip 和 mark 绘制 |
+| `@so-chart/types`    | 共享 TypeScript 类型      |
+| `@so-chart/utils`    | 共享工具                  |
 
 `@so-chart/guage` 的包名保留现有拼写，以避免改变已有调用方的导入路径；如果未来发布全新兼容包，可以再单独提供正确拼写的 `gauge` 别名。
 
