@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/sankey",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "桑基图",
   "type": "module",
   "files": [

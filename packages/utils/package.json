@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/utils",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "共享工具",
   "type": "module",
   "files": [

@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/guage",
-  "version": "1.0.42",
+  "version": "1.0.43",
   "description": "仪表图",
   "type": "module",
   "files": [

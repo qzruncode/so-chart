@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/point",
-  "version": "1.0.58",
+  "version": "1.0.59",
   "description": "散点图",
   "type": "module",
   "files": [

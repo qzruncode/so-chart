@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/types",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "共享 TypeScript 类型",
   "type": "module",
   "files": [

@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/progress",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "进度条",
   "type": "module",
   "files": [

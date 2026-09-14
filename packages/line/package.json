@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/line",
-  "version": "1.0.77",
+  "version": "1.0.78",
   "description": "折线图",
   "type": "module",
   "files": [
