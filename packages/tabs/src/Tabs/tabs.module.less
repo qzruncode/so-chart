@@ -1,0 +1,113 @@
+.tabs_container {
+  height: max-content;
+  width: max-content;
+  margin: auto;
+  z-index: 2;
+}
+
+.tabs {
+  overflow: auto;
+  display: flex;
+  align-items: start;
+  flex-wrap: nowrap;
+  user-select: none;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  .foot-item {
+    cursor: pointer;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    .size {
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+    }
+    .circle {
+      border-radius: 50%;
+      .size();
+    }
+    .rect {
+      .size();
+    }
+    .foot-label {
+      margin-left: 2px;
+      color: var(--text-secondary-color);
+    }
+    .foot-label-extra {
+      color: var(--text-secondary-color);
+    }
+    .labels-map {
+      margin-top: 4px;
+    }
+  }
+  .no_choose {
+    opacity: 0.35;
+  }
+  .choosed {
+    opacity: 1;
+  }
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+
+  .triangle {
+    appearance: none;
+    box-sizing: border-box;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary-color);
+    font: inherit;
+    line-height: 1;
+    user-select: none;
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease;
+
+    &::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(-45deg);
+    }
+
+    &[data-direction='left']::before {
+      transform: rotate(135deg);
+    }
+
+    &[data-hidden='true'] {
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    &:hover {
+      color: var(--primary-color);
+      background: var(--background-color-light);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 1px;
+    }
+  }
+}

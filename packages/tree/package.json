@@ -1,0 +1,43 @@
+{
+  "name": "@so-chart/tree",
+  "version": "1.0.55",
+  "description": "树形图",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/tree.umd.cjs",
+  "module": "./dist/tree.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/tree.js",
+      "require": "./dist/tree.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types build && pnpm build"
+  },
+  "keywords": [
+    "tree"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@dagrejs/dagre": "^3.1.1",
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^",
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}

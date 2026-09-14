@@ -1,0 +1,67 @@
+{
+  "name": "@so-chart/types",
+  "version": "2.2.1",
+  "description": "共享 TypeScript 类型",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    },
+    "./common": {
+      "types": "./dist/common.d.ts"
+    },
+    "./guage": {
+      "types": "./dist/guage.d.ts"
+    },
+    "./pie": {
+      "types": "./dist/pie.d.ts"
+    },
+    "./point": {
+      "types": "./dist/point.d.ts"
+    },
+    "./line": {
+      "types": "./dist/line.d.ts"
+    },
+    "./bar": {
+      "types": "./dist/bar.d.ts"
+    },
+    "./radar": {
+      "types": "./dist/radar.d.ts"
+    },
+    "./tree": {
+      "types": "./dist/tree.d.ts"
+    },
+    "./calendar": {
+      "types": "./dist/calendar.d.ts"
+    },
+    "./sankey": {
+      "types": "./dist/sankey.d.ts"
+    },
+    "./progress": {
+      "types": "./dist/progress.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^3.1.1",
+    "@types/d3-quadtree": "^3.0.6",
+    "@types/d3-scale": "^4.0.9"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}

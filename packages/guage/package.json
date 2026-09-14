@@ -1,0 +1,42 @@
+{
+  "name": "@so-chart/guage",
+  "version": "1.0.42",
+  "description": "仪表图",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/guage.umd.cjs",
+  "module": "./dist/guage.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/guage.js",
+      "require": "./dist/guage.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types build && pnpm build"
+  },
+  "keywords": [
+    "guage"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^",
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}

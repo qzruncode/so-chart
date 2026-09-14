@@ -1,0 +1,42 @@
+{
+  "name": "@so-chart/calendar",
+  "version": "1.0.55",
+  "description": "日历图",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/calendar.umd.cjs",
+  "module": "./dist/calendar.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/calendar.js",
+      "require": "./dist/calendar.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types build && pnpm build"
+  },
+  "keywords": [
+    "calendar"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^",
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}

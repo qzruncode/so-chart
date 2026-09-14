@@ -1,0 +1,44 @@
+{
+  "name": "@so-chart/utils",
+  "version": "2.0.8",
+  "description": "共享工具",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/utils.umd.cjs",
+  "module": "./dist/utils.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/utils.js",
+      "require": "./dist/utils.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "prerelease": "npm version prerelease --preid=beta"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  },
+  "peerDependencies": {
+    "d3": "^7.9.0"
+  }
+}

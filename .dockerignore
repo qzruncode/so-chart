@@ -1,0 +1,16 @@
+**/node_modules
+**/dist
+**/build
+node_modules
+dist
+build
+coverage
+.git
+.github
+.npmrc
+.env*
+.eslintcache
+benchmark-results.json
+stats.html
+.dev
+*.tsbuildinfo

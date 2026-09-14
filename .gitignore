@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.git
+todos.md
+stats.html
+.dev
+.npmrc
+.env
+.env.*
+!.env.example
+*.tsbuildinfo

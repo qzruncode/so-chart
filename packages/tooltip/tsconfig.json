@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "useDefineForClassFields": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "allowImportingTsExtensions": true,
+    "declarationDir": "./dist",
+    "declaration": true, // 生成.d.ts文件
+    "emitDeclarationOnly": true
+  },
+  "include": ["src", "global.d.ts"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.vite.json" }]
+}

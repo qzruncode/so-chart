@@ -1,0 +1,44 @@
+{
+  "name": "@so-chart/point",
+  "version": "1.0.58",
+  "description": "散点图",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/point.umd.cjs",
+  "module": "./dist/point.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/point.js",
+      "require": "./dist/point.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types -F @so-chart/tabs -F @so-chart/tooltip build && pnpm build"
+  },
+  "keywords": [
+    "point"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/tabs": "workspace:^",
+    "@so-chart/tooltip": "workspace:^",
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^",
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^8.66.0",
+    "@typescript-eslint/parser": "^8.66.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}

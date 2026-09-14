@@ -1,0 +1,445 @@
+// 全局样式优化
+
+// 图表语义色，保持组件脱离外部主题包后仍可独立运行
+:root {
+  --primary-color: #029be6;
+  --primary-color-hover: #0079bf;
+  --primary-color-active: #005c99;
+  --text-color: #2d364d;
+  --text-secondary-color: #b3b8c7;
+  --border-color: #d6dae6;
+  --background-color-light: #f6f8fe;
+  --text-disabled-color: #ced2df;
+  --tooltip-background: #ffffff;
+  --chart-flow-link-background: #202340;
+  --chart-crossline-color: #6d7588;
+  --chart-calendarCell-background: #6d7588;
+  --chart-tick-color: #202340;
+  --color-bg-attack: #ffffff;
+}
+
+.dark {
+  --primary-color: #2a72dc;
+  --primary-color-hover: #5092e8;
+  --primary-color-active: #7bb3f3;
+  --text-color: #eeeeee;
+  --text-secondary-color: #999ca3;
+  --border-color: #2a2b2f;
+  --background-color-light: #1c1c1e;
+  --text-disabled-color: #676a72;
+  --tooltip-background: #000000;
+  --chart-flow-link-background: #c8cdd5;
+  --chart-crossline-color: #acb0b6;
+  --chart-calendarCell-background: #acb0b6;
+  --chart-tick-color: #c8cdd5;
+  --color-bg-attack: #000000;
+}
+
+// 平滑滚动
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 滚动条美化
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+// 暗黑模式下的滚动条
+.dark {
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+// 卡片悬停效果
+.chart-card {
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+// 代码高亮优化
+pre {
+  margin: 0;
+  border-radius: 6px;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+// 链接样式
+a {
+  color: var(--primary-color, #1890ff);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-color-hover, #40a9ff);
+  }
+}
+
+// 表格样式优化
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+
+  th,
+  td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid var(--border-color, #e8e8e8);
+  }
+
+  th {
+    font-weight: 600;
+    background: var(--background-color-light, #fafafa);
+  }
+}
+
+// 动画效果
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chart-card,
+.ant-card {
+  animation: fadeIn 0.3s ease;
+}
+
+// 应用布局
+.so-chart-layout {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.so-chart-sider {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1001 !important;
+}
+
+.so-chart-content {
+  min-width: 0;
+}
+
+.so-chart-header {
+  position: sticky;
+  top: 12px;
+  z-index: 900;
+}
+
+.so-chart-header-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.so-chart-menu-button,
+.so-chart-mobile-mask {
+  display: none;
+}
+
+.so-chart-theme-button {
+  flex-shrink: 0;
+}
+
+.so-chart-page-container {
+  min-width: 0;
+  overflow: visible;
+}
+
+// 图表页面：目录在桌面端和移动端都吸附在视口内
+.chart-page__main {
+  min-width: 0;
+}
+
+.chart-page__section {
+  scroll-margin-top: 96px;
+}
+
+.chart-page__toc-shell {
+  box-sizing: border-box;
+  position: sticky !important;
+  top: 96px !important;
+  z-index: 800;
+  max-height: calc(100vh - 112px) !important;
+}
+
+.chart-page__toc {
+  box-sizing: border-box;
+}
+
+.chart-page__toc-list {
+  min-width: 0;
+}
+
+// 图表卡片：窄屏减少留白，并允许宽图表横向查看
+.chart-wrapper {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.chart-wrapper__chart {
+  min-width: 0;
+  max-width: 100%;
+}
+
+// Sankey band：交互命中由 d3-quadtree 计算，视觉路径只负责呈现状态
+.so-chart_dataflow_links path.so-chart_dataflow_link {
+  transition:
+    stroke 0.1s ease,
+    stroke-width 0.1s ease;
+}
+
+.des {
+  min-width: 0;
+}
+
+// 搜索联动图表：桌面横向排列，移动端上下排列
+.search-chart-layout {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 270px;
+}
+
+.search-chart {
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-tabs-panel {
+  flex: 0 0 350px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .so-chart-sider {
+    width: min(84vw, 288px) !important;
+    max-width: min(84vw, 288px) !important;
+    height: 100dvh !important;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.16);
+  }
+
+  .so-chart-sider--open {
+    transform: translateX(0);
+  }
+
+  .so-chart-mobile-mask {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.38);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .so-chart-mobile-mask--open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .so-chart-content {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .so-chart-header {
+    gap: 8px;
+    position: fixed;
+    top: 8px;
+    left: 12px;
+    right: 12px;
+    margin: 0 !important;
+    padding: 12px 16px !important;
+    min-height: 56px;
+    box-sizing: border-box;
+  }
+
+  .so-chart-menu-button {
+    display: inline-flex;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .so-chart-header-title {
+    font-size: 18px !important;
+    white-space: nowrap;
+  }
+
+  .so-chart-theme-button {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 !important;
+  }
+
+  .so-chart-theme-label {
+    display: none;
+  }
+
+  .so-chart-page-container {
+    margin: 84px 12px 12px !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .chart-page {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .chart-page__main {
+    width: 100%;
+    padding-right: 0 !important;
+    order: 1;
+  }
+
+  .chart-page__toc-shell {
+    position: fixed !important;
+    top: 84px !important;
+    right: 8px;
+    z-index: 800;
+    width: 112px !important;
+    max-width: 112px !important;
+    max-height: min(320px, calc(100dvh - 100px)) !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    transform: none;
+  }
+
+  .chart-page__toc {
+    display: block;
+    width: 100%;
+    max-height: min(320px, calc(100dvh - 100px));
+    margin: 0;
+    padding: 10px !important;
+    overflow-y: auto;
+    border-radius: 12px !important;
+    opacity: 0.96;
+  }
+
+  .chart-page__toc > div:first-child {
+    margin-bottom: 8px !important;
+    padding-bottom: 6px !important;
+    font-size: 12px !important;
+  }
+
+  .chart-page__toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .chart-page__toc-list > a {
+    margin: 0 !important;
+    min-height: 36px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 8px !important;
+    font-size: 12px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .chart-wrapper {
+    padding: 16px !important;
+    margin-bottom: 16px !important;
+    border-radius: 10px !important;
+  }
+
+  .chart-wrapper h3 {
+    font-size: 16px !important;
+  }
+
+  .chart-wrapper__chart {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .des {
+    flex-direction: column;
+    gap: 16px !important;
+  }
+
+  .search-chart-layout {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .search-chart {
+    flex: 0 0 270px;
+    width: 100%;
+    height: 270px;
+    margin-bottom: 16px;
+  }
+
+  .search-tabs-panel {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    padding: 16px 0 0 !important;
+    border-left: 0 !important;
+    border-top: 1px dashed var(--border-color);
+  }
+}
