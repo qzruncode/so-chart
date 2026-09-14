@@ -10,3 +10,5 @@
 - 未确认授权的图片、字体和其他二进制资源。
 
 同步后请检查公开差异，并在干净环境执行安装、lint、测试和构建。公开分支的提交应通过 GitHub Actions 后再发布。
+
+公开预览站由 `.github/workflows/deploy.yml` 部署到 GitHub Pages。部署目标使用 `github-pages` Environment；Ruleset 只有在该部署成功后才允许合并到 `prod`。
