@@ -37,7 +37,7 @@
   "author": "ye",
   "license": "ISC",
   "dependencies": {
-    "@ant-design/icons": "^6.3.2",
+    "@ant-design/icons": "^6.3.4",
     "@so-chart/bar": "workspace:*",
     "@so-chart/calendar": "workspace:*",
     "@so-chart/guage": "workspace:*",
