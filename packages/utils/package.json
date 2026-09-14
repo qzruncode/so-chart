@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/utils",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "共享工具",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/utils"
+  },
   "type": "module",
   "files": [
     "dist"

@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/tabs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "底层标签栏渲染能力",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/tabs"
+  },
   "type": "module",
   "files": [
     "dist"

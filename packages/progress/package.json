@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/progress",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "进度条",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/progress"
+  },
   "type": "module",
   "files": [
     "dist"

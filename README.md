@@ -117,7 +117,15 @@ pnpm run preview:build
 
 ## 版本发布
 
-发布包使用 Changesets：
+发布包使用 Changesets，并由 `prod` 分支上的 GitHub Actions 自动接续：
+
+1. 功能变更在 PR 中运行 `pnpm changeset`，说明受影响的包和版本级别。
+2. PR 合并到 `prod` 后，`release.yml` 自动生成或更新版本 PR。
+3. 版本 PR 合并到 `prod` 后，`publish.yml` 自动构建并发布有新版本的包到 npm，同时生成 provenance。
+
+本仓库的 npm 发布使用 GitHub OIDC Trusted Publishing，不把个人 OTP 或发布 token 写入仓库。当前包名使用 `@so-chart/*`，首发前 npm 账号必须拥有 `so-chart` scope（通常通过创建同名 npm organization）。Trusted Publisher 只能绑定已经存在的 npm 包，因此首发初始化需要一次性 bootstrap：使用仅用于发布的 granular token 配置 GitHub 仓库 secret `NPM_TOKEN`，或先手动发布一次；完成首发后，在每个包的 npm 设置中配置 GitHub Trusted Publisher：用户/组织 `qzruncode`、仓库 `so-chart`、workflow 文件 `publish.yml`，并允许 `npm publish`，随后删除 `NPM_TOKEN`。此后版本发布不再需要 OTP 或人工操作。
+
+本地只用于预览发布计划或手动发布：
 
 ```bash
 pnpm changeset

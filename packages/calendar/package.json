@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/calendar",
-  "version": "1.0.55",
+  "version": "1.0.56",
   "description": "日历图",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/calendar"
+  },
   "type": "module",
   "files": [
     "dist"

@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/tree",
-  "version": "1.0.55",
+  "version": "1.0.56",
   "description": "树形图",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/tree"
+  },
   "type": "module",
   "files": [
     "dist"

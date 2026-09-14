@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/pie",
-  "version": "2.0.17",
+  "version": "2.0.18",
   "description": "饼图",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/pie"
+  },
   "type": "module",
   "files": [
     "dist"
