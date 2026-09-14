@@ -9,6 +9,6 @@
 - 内部审查脚本、个人工具配置或真实业务数据；
 - 未确认授权的图片、字体和其他二进制资源。
 
-同步后请检查公开差异，并在干净环境执行安装、lint、测试和构建。公开分支的提交应通过 GitHub Actions 后再发布。
+同步后请检查公开差异，并在干净环境执行安装、lint、测试和构建。公开分支的提交会自动触发 GitHub Actions；发布包只由版本 PR 合并后的发布 workflow 执行。
 
-公开预览站由 `.github/workflows/deploy.yml` 部署到 GitHub Pages。部署目标使用 `github-pages` Environment；Ruleset 只有在该部署成功后才允许合并到 `prod`。Pages 构建会将 `VITE_BASE_PATH` 设置为 `/so-chart/`，确保直接访问 `/chart/...` 路由时静态资源仍从仓库站点根路径加载。
+公开预览站由 `.github/workflows/deploy.yml` 部署到 GitHub Pages。Pages 构建会将 `VITE_BASE_PATH` 设置为 `/so-chart/`，确保直接访问 `/chart/...` 路由时静态资源仍从仓库站点根路径加载。`release.yml` 负责 Changesets 版本 PR，`publish.yml` 负责版本 PR 合并后的 npm 构建和发布；npm 发布使用 OIDC Trusted Publishing，不依赖个人 OTP。

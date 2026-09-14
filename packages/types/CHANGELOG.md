@@ -1,5 +1,11 @@
 # @so-chart/types
 
+## 2.2.2
+
+### Patch Changes
+
+- be55d66: Prepare the chart packages for the public open-source distribution.
+
 ## 2.2.1
 
 ### Patch Changes

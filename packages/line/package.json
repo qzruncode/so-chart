@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/line",
-  "version": "1.0.77",
+  "version": "1.0.78",
   "description": "折线图",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/line"
+  },
   "type": "module",
   "files": [
     "dist"

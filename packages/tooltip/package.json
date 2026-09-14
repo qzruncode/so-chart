@@ -1,7 +1,12 @@
 {
   "name": "@so-chart/tooltip",
-  "version": "1.0.47",
+  "version": "1.0.48",
   "description": "浮动提示框",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/tooltip"
+  },
   "type": "module",
   "files": [
     "dist"

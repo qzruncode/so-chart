@@ -1,5 +1,16 @@
 # @so-chart/point
 
+## 1.0.59
+
+### Patch Changes
+
+- be55d66: Prepare the chart packages for the public open-source distribution.
+- Updated dependencies [be55d66]
+  - @so-chart/tabs@2.0.1
+  - @so-chart/tooltip@1.0.48
+  - @so-chart/types@2.2.2
+  - @so-chart/utils@2.0.9
+
 ## 1.0.58
 
 ### Patch Changes
