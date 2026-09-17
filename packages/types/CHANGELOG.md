@@ -1,5 +1,11 @@
 # @so-chart/types
 
+## 2.3.0
+
+### Minor Changes
+
+- 为内置图例新增可选的多选显隐模式，同时保留现有单选行为作为默认值。
+
 ## 2.2.2
 
 ### Patch Changes

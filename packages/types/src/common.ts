@@ -104,6 +104,7 @@ export type RequiredMarkOption = ((
 
 export type LabelsOptions = {
   show?: boolean;
+  selectionMode?: 'single' | 'multiple';
   data?: string[];
   type?: 'circle' | 'rect' | 'path';
   path?: string;

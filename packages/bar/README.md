@@ -33,6 +33,8 @@ chart.setOption(options);
 
 `chartType` 支持 `bar`、`circleStackBar` 和 `trend`，不同类型对应不同的选项类型。组件卸载或重新创建图表前，请调用 `chart.dispose()`。
 
+基础柱状图和环形堆叠柱状图的图例默认使用 `labels.selectionMode: 'single'`：点击一项后只显示对应数据集，再次点击恢复全部。设置为 `multiple` 后，每次点击只切换对应数据集，允许同时隐藏或显示多项，也允许全部隐藏。
+
 ## 柱宽与 hover 交互
 
 趋势柱状图会根据 `scaleBand` 的实际带宽自适应柱宽。`maxBarWidth` 是最大值，`barGap` 是期望间距；当数据点较密时，间距会自动压缩，避免柱子退化为 1px 细线。Tooltip 命中使用 D3 `quadtree` 查找当前带宽内的最近柱位，鼠标经过柱间空隙时仍保持稳定命中。

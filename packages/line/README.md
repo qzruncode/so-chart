@@ -34,6 +34,8 @@ chart.setOption(options);
 
 `area`、`stack`、`showPoint`、`voronoi`、`cross`、`mark` 和 `labels` 都是 `LineOptions` 的可选配置。数据中的 `null`/`undefined` 可配合 `missing` 选择断线、直线连接或归零处理。Tooltip 支持 `fixed: true` 与 `drag: true` 固定并拖拽提示框。
 
+图例默认使用 `labels.selectionMode: 'single'`：点击一项后只显示对应曲线，再次点击恢复全部。设置为 `multiple` 后，每次点击只切换对应曲线，允许同时隐藏或显示多条曲线，也允许全部隐藏。
+
 ## 生命周期、主题与 CSP
 
 组件卸载或重新创建图表前，请调用 `chart.dispose()`，以释放动画帧、Canvas、事件通道和 ResizeObserver。图表包不会持有宿主主题状态；主题变化后应重新执行 `setOption` 并传入新的颜色配置。

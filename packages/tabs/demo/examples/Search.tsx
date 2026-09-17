@@ -38,7 +38,12 @@ export default function Search() {
   }, [themeVersion]);
 
   return (
-    <ChartWrapper className="search-chart-wrapper" title="搜索联动图表" description="搜索、分页和详情按钮由调用方实现" height="auto">
+    <ChartWrapper
+      className="search-chart-wrapper"
+      title="搜索联动图表"
+      description="下方内置图例支持多选显隐；右侧搜索、分页和详情按钮由调用方实现"
+      height="auto"
+    >
       <div className="search-chart-layout">
         <div ref={chartRef} className="search-chart" />
         <div className="search-tabs-panel" style={{ borderLeft: '1px dashed var(--border-color)' }}>
