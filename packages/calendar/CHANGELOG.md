@@ -1,12 +1,11 @@
-# @so-chart/calendar
-
 ## 1.0.56
 
 ### Patch Changes
 
 - be55d66: Prepare the chart packages for the public open-source distribution.
+- 统一依赖最新的 `@so-chart/types@2.3.0` 与 `@so-chart/utils@2.0.9`，避免消费项目同时安装多套基础包。
 - Updated dependencies [be55d66]
-  - @so-chart/types@2.2.2
+  - @so-chart/types@2.3.0
   - @so-chart/utils@2.0.9
 
 ## 1.0.55
