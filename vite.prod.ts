@@ -11,9 +11,14 @@ export default defineConfig({
   base: publicBase,
   build: {
     assetsDir: 'js',
+    // Three.js is intentionally isolated as the 3D demo's vendor runtime.
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
         manualChunks(id) {
+          if (id.includes('/node_modules/three/')) {
+            return 'three';
+          }
           if (
             id.includes('/node_modules/react-router/') ||
             id.includes('/node_modules/react-router-dom/') ||

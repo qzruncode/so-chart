@@ -1,0 +1,52 @@
+{
+  "name": "@so-chart/scatter3d",
+  "version": "0.1.0",
+  "description": "基于 Three.js 和 WebGL 的 3D 散点图",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/scatter3d"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/scatter3d.umd.cjs",
+  "module": "./dist/scatter3d.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/scatter3d.js",
+      "require": "./dist/scatter3d.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types build && pnpm build"
+  },
+  "keywords": [
+    "scatter",
+    "3d",
+    "webgl",
+    "three"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "@so-chart/tooltip": "workspace:^",
+    "@so-chart/utils": "workspace:^"
+  },
+  "peerDependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "eslint": "^10.8.1",
+    "three": "^0.186.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}

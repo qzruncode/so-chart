@@ -25,6 +25,7 @@ const getColor = (chartType: CommonChart['chartType'], dataset: CommonExposedDat
       return (dataset as { backgroundColor: string }).backgroundColor;
     case 'trend':
     case 'point':
+    case 'scatter3d':
       return (dataset as { dotColor: string }).dotColor;
     default:
       break;

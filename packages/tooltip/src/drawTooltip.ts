@@ -10,7 +10,7 @@ export type CommonChart = {
   scale: number;
   svg: SVGSVGElement;
   container: HTMLElement;
-  chartType: 'line' | 'pie' | 'bar' | 'circleStackBar' | 'point' | 'trend' | 'radar';
+  chartType: 'line' | 'pie' | 'bar' | 'circleStackBar' | 'point' | 'trend' | 'radar' | 'scatter3d';
   tooltip?: Required<TooltipOptions> & { x?: number; y?: number };
   layout: Required<Layout>;
 };
