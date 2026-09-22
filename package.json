@@ -74,7 +74,7 @@
     "@types/three": "^0.186.0",
     "@typescript-eslint/eslint-plugin": "^8.66.0",
     "@typescript-eslint/parser": "^8.66.0",
-    "@vitejs/plugin-react": "^6.0.5",
+    "@vitejs/plugin-react": "^6.1.1",
     "@vitest/browser": "^4.1.10",
     "eslint": "^10.8.1",
     "eslint-plugin-react-hooks": "^7.1.1",
