@@ -33,6 +33,8 @@ chart.setOption(options);
 
 `xAxis.type` 也可以使用 `date` 或 `mapping`；`cross` 控制十字线与点提示，`dotType`、`dotSize` 和 `dotColor` 控制点样式。组件卸载或重新创建图表前，请调用 `chart.dispose()`。
 
+图例默认使用 `labels.selectionMode: 'single'`：点击一项后只显示对应数据集，再次点击恢复全部。设置为 `multiple` 后，每次点击只切换对应数据集，允许同时隐藏或显示多项，也允许全部隐藏。
+
 ## CSP nonce 与类型
 
 创建图表时可以传入 `nonce`。图表包不会生成 nonce，解析优先级为显式 `nonce`、宿主页面已有资源 nonce，最后兼容 `globalThis.__CSP_NONCE__`。

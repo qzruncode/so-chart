@@ -14,6 +14,7 @@ function createChart(): CommonChart {
     ],
     labels: {
       show: true,
+      selectionMode: 'single',
       data: ['Sales', 'Support'],
       type: 'circle',
       path: '',
@@ -84,6 +85,51 @@ describe('drawTabs', () => {
     expect(leftButton.dataset.hidden).toBe('true');
     expect(rightButton.dataset.hidden).toBe('true');
 
+    destroyTabs(chart.svg);
+  });
+
+  it('toggles line datasets independently in multiple selection mode', () => {
+    const chart = createChart();
+    chart.chartType = 'line';
+    chart.labels.selectionMode = 'multiple';
+    chart.datasets[0].data = [-3, -2];
+    chart.datasets[1].data = [-1];
+    chart.yAxis = { data: { start: 0, end: 10 } };
+    chart.refreshLine = vi.fn();
+    document.body.appendChild(chart.svg);
+
+    const controller = drawTabs(chart);
+    const items = controller.element.querySelectorAll('[role="button"]');
+    items[0].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    expect(chart.datasets.map(dataset => dataset.show)).toEqual([false, true]);
+    expect(chart.yAxis.data).toEqual({ start: -1, end: 0 });
+    expect(chart.refreshLine).toHaveBeenCalledTimes(1);
+
+    items[1].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    expect(chart.datasets.map(dataset => dataset.show)).toEqual([false, false]);
+    expect(chart.yAxis.data).toEqual({ start: 0, end: 10 });
+
+    controller.element.querySelectorAll('[role="button"]')[0].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    expect(chart.datasets.map(dataset => dataset.show)).toEqual([true, false]);
+    destroyTabs(chart.svg);
+  });
+
+  it('keeps exclusive line selection as the default mode', () => {
+    const chart = createChart();
+    chart.chartType = 'line';
+    chart.datasets.forEach((dataset, index) => {
+      dataset.data = [index + 1, index + 2];
+    });
+    chart.yAxis = { data: { start: 0, end: 10 } };
+    chart.refreshLine = vi.fn();
+    document.body.appendChild(chart.svg);
+
+    const controller = drawTabs(chart);
+    controller.element.querySelectorAll('[role="button"]')[0].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    expect(chart.datasets.map(dataset => dataset.show)).toEqual([true, false]);
+
+    controller.element.querySelectorAll('[role="button"]')[0].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    expect(chart.datasets.map(dataset => dataset.show)).toEqual([true, true]);
     destroyTabs(chart.svg);
   });
 });

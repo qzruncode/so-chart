@@ -4,6 +4,8 @@
 
 ### Patch Changes
 
+- 接入内置图例的多选显隐配置，并声明对新版 tabs、types 和 utils 的依赖。
+
 - be55d66: Prepare the chart packages for the public open-source distribution.
 - Updated dependencies [be55d66]
   - @so-chart/tabs@2.0.1

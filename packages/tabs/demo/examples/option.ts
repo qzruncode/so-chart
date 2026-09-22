@@ -61,6 +61,7 @@ export function createSearchChartOptions(source: Element | null) {
     labels: {
       type: 'rect',
       fontSize: 14,
+      selectionMode: 'multiple',
     },
     datasets: [
       {

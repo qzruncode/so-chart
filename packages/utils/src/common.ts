@@ -1,4 +1,13 @@
-import type { Layout, LabelsOptions, TooltipOptions, CrossOptions, Animate, MarkOption, ColorSystem, RequiredMarkOption } from '@so-chart/types/common';
+import type {
+  Layout,
+  LabelsOptions,
+  TooltipOptions,
+  CrossOptions,
+  Animate,
+  MarkOption,
+  ColorSystem,
+  RequiredMarkOption,
+} from '@so-chart/types/common';
 import { D, S } from './helper';
 import { getColor } from './color';
 
@@ -43,6 +52,7 @@ export function applyLabels(params: { labels?: LabelsOptions; defaultLableData: 
   const { labels, defaultLableData } = params;
   const newLabels = (labels ? Object.assign({}, labels) : {}) as Required<LabelsOptions>;
   D<Required<LabelsOptions>, 'show'>(newLabels, 'show', true);
+  D<Required<LabelsOptions>, 'selectionMode'>(newLabels, 'selectionMode', 'single');
   D<Required<LabelsOptions>, 'data'>(newLabels, 'data', defaultLableData);
   D<Required<LabelsOptions>, 'type'>(newLabels, 'type', 'circle');
   D<Required<LabelsOptions>, 'path'>(newLabels, 'path', '');

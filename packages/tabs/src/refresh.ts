@@ -4,7 +4,8 @@ import { CommonChart } from '.';
 export function refreshChartWithAxis(
   index: number | undefined,
   chart: CommonChart,
-  _range: { start: number; end: number } | { start: Date; end: Date } | Array<number> | Array<Date> | Array<string>
+  _range: { start: number; end: number } | { start: Date; end: Date } | Array<number> | Array<Date> | Array<string>,
+  selectionMode: 'single' | 'multiple' = 'single'
 ) {
   const { datasets, yAxis } = chart;
   if (index === undefined) {
@@ -35,6 +36,18 @@ export function refreshChartWithAxis(
         }
       }
       //
+    } else if (selectionMode === 'multiple') {
+      const dataset = datasets[index];
+      dataset.show = !dataset.show;
+      const visibleDatasets = datasets.filter(d => d.show);
+      const values = getVisibleValues(chart, visibleDatasets);
+      if (values.length === 0) {
+        yAxis!.data = _range;
+      } else {
+        const [start, end] = extent(values) as [number, number];
+        const originalStart = !Array.isArray(_range) && typeof _range.start === 'number' ? _range.start : undefined;
+        yAxis!.data = getValueRange(start, end, originalStart);
+      }
     } else {
       const dataset = datasets[index];
       const data = (dataset.data as (null | undefined | number)[]).filter(d => d != null) as number[];
@@ -70,6 +83,31 @@ export function refreshChartWithAxis(
   if (chart.chartType === 'radar') {
     chart.refreshRadar?.();
   }
+}
+
+function getVisibleValues(chart: CommonChart, datasets: CommonChart['datasets']) {
+  const isStack = chart.chartType === 'circleStackBar' || chart.stack === true;
+  if (!isStack) {
+    return datasets
+      .flatMap(dataset => (Array.isArray(dataset.data) ? dataset.data : [dataset.data]))
+      .filter((value): value is number => value != null && Number.isFinite(value));
+  }
+  const dataList = datasets.map(dataset => (Array.isArray(dataset.data) ? dataset.data : [dataset.data]));
+  const dataLength = Math.max(0, ...dataList.map(data => data.length));
+  return Array.from({ length: dataLength }, (_, index) =>
+    dataList.reduce((total, data) => total + (typeof data[index] === 'number' ? data[index] : 0), 0)
+  );
+}
+
+function getValueRange(start: number, end: number, originalStart?: number) {
+  const rangeStart = originalStart === 0 ? Math.min(start, 0) : start;
+  if (start !== end) {
+    return { start: rangeStart, end: originalStart === 0 ? Math.max(end, 0) : end };
+  }
+  if (start === 0) {
+    return { start: 0, end: 100 };
+  }
+  return start > 0 ? { start: 0, end } : { start, end: 0 };
 }
 
 export function refreshChartWithoutAxis(index: number | undefined, chart: CommonChart) {

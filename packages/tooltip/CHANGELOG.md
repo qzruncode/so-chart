@@ -1,12 +1,19 @@
 # @so-chart/tooltip
 
+## 1.0.49
+
+### Patch Changes
+
+- 91e62f3: 扩展共享 Tooltip，使其支持三维散点图的 hover 内容展示和定位。
+
 ## 1.0.48
 
 ### Patch Changes
 
 - be55d66: Prepare the chart packages for the public open-source distribution.
+- 统一依赖最新的 `@so-chart/types@2.3.0` 与 `@so-chart/utils@2.0.9`，避免消费项目同时安装多套基础包。
 - Updated dependencies [be55d66]
-  - @so-chart/types@2.2.2
+  - @so-chart/types@2.3.0
   - @so-chart/utils@2.0.9
 
 ## 1.0.47
