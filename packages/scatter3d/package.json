@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/scatter3d",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "基于 Three.js 和 WebGL 的 3D 散点图",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "vite -c vite.dev.ts",
     "build": "vite build -c vite.prod.ts && tsc",
-    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types build && pnpm build"
+    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types -F @so-chart/tooltip build && pnpm build"
   },
   "keywords": [
     "scatter",

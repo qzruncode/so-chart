@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.0
+
+### Minor Changes
+
+- 91e62f3: 新增基于 Three.js 和 WebGL 的 3D 散点图包，并提供可配置坐标轴、网格、点样式、相机控制和 Tooltip 交互。
+
+### Patch Changes
+
+- Updated dependencies [91e62f3]
+  - @so-chart/tooltip@1.0.49
+
 ## 0.1.0
 
 - 新增基于 Three.js 和 WebGL 的 3D 散点图。
