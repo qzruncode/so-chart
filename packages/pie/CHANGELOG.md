@@ -1,3 +1,5 @@
+# @so-chart/pie
+
 ## 2.0.18
 
 ### Patch Changes
