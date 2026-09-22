@@ -1,12 +1,13 @@
 # so-chart
 
-基于 D3、Canvas 和 SVG 的可组合图表组件集合，提供独立可安装的 TypeScript 包和在线 Demo。
+基于 D3、Canvas、SVG 和 Three.js WebGL 的可组合图表组件集合，提供独立可安装的 TypeScript 包和在线 Demo。
 
 [在线 Demo](https://qzruncode.github.io/so-chart/) · [贡献指南](./CONTRIBUTING.md) · [安全策略](./SECURITY.md)
 
 ## 特性
 
 - 支持 Canvas 和 SVG 图表。
+- 支持基于 Three.js 和 WebGL 的 3D 散点图。
 - 统一的 `setOption`、`resize` 和 `dispose` 生命周期。
 - 每个图表包可以独立安装和发布。
 - 提供公开的 TypeScript 类型。
@@ -55,22 +56,23 @@ export function LineChart() {
 
 ## 包列表
 
-| 包                                                                       | 说明                     |
-| ------------------------------------------------------------------------ | ------------------------ |
-| [`@so-chart/bar`](https://www.npmjs.com/package/@so-chart/bar)           | 柱状图                   |
-| [`@so-chart/calendar`](https://www.npmjs.com/package/@so-chart/calendar) | 日历图                   |
-| [`@so-chart/guage`](https://www.npmjs.com/package/@so-chart/guage)       | 仪表图                   |
-| [`@so-chart/line`](https://www.npmjs.com/package/@so-chart/line)         | 折线图                   |
-| [`@so-chart/pie`](https://www.npmjs.com/package/@so-chart/pie)           | 饼图                     |
-| [`@so-chart/point`](https://www.npmjs.com/package/@so-chart/point)       | 散点图                   |
-| [`@so-chart/progress`](https://www.npmjs.com/package/@so-chart/progress) | 进度图和滑块             |
-| [`@so-chart/radar`](https://www.npmjs.com/package/@so-chart/radar)       | 雷达图                   |
-| [`@so-chart/sankey`](https://www.npmjs.com/package/@so-chart/sankey)     | 桑基图                   |
-| [`@so-chart/tabs`](https://www.npmjs.com/package/@so-chart/tabs)         | 图表标签栏               |
-| [`@so-chart/tooltip`](https://www.npmjs.com/package/@so-chart/tooltip)   | Tooltip 和 mark 绘制工具 |
-| [`@so-chart/tree`](https://www.npmjs.com/package/@so-chart/tree)         | 树图和流程图             |
-| [`@so-chart/types`](https://www.npmjs.com/package/@so-chart/types)       | 共享 TypeScript 类型     |
-| [`@so-chart/utils`](https://www.npmjs.com/package/@so-chart/utils)       | 共享工具                 |
+| 包                                                                         | 说明                     |
+| -------------------------------------------------------------------------- | ------------------------ |
+| [`@so-chart/bar`](https://www.npmjs.com/package/@so-chart/bar)             | 柱状图                   |
+| [`@so-chart/calendar`](https://www.npmjs.com/package/@so-chart/calendar)   | 日历图                   |
+| [`@so-chart/guage`](https://www.npmjs.com/package/@so-chart/guage)         | 仪表图                   |
+| [`@so-chart/line`](https://www.npmjs.com/package/@so-chart/line)           | 折线图                   |
+| [`@so-chart/pie`](https://www.npmjs.com/package/@so-chart/pie)             | 饼图                     |
+| [`@so-chart/point`](https://www.npmjs.com/package/@so-chart/point)         | 散点图                   |
+| [`@so-chart/scatter3d`](https://www.npmjs.com/package/@so-chart/scatter3d) | WebGL 3D 散点图          |
+| [`@so-chart/progress`](https://www.npmjs.com/package/@so-chart/progress)   | 进度图和滑块             |
+| [`@so-chart/radar`](https://www.npmjs.com/package/@so-chart/radar)         | 雷达图                   |
+| [`@so-chart/sankey`](https://www.npmjs.com/package/@so-chart/sankey)       | 桑基图                   |
+| [`@so-chart/tabs`](https://www.npmjs.com/package/@so-chart/tabs)           | 图表标签栏               |
+| [`@so-chart/tooltip`](https://www.npmjs.com/package/@so-chart/tooltip)     | Tooltip 和 mark 绘制工具 |
+| [`@so-chart/tree`](https://www.npmjs.com/package/@so-chart/tree)           | 树图和流程图             |
+| [`@so-chart/types`](https://www.npmjs.com/package/@so-chart/types)         | 共享 TypeScript 类型     |
+| [`@so-chart/utils`](https://www.npmjs.com/package/@so-chart/utils)         | 共享工具                 |
 
 `@so-chart/guage` 的包名保留现有拼写。
 

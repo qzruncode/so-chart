@@ -6,6 +6,7 @@ export type CommonChart = {
   svg: SVGSVGElement;
   chartId: string;
   chartType: 'bar' | 'circleStackBar' | 'line' | 'point' | 'pie' | 'radar';
+  stack?: boolean;
   datasets: {
     show: boolean;
     lineColor?: string;

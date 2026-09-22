@@ -54,6 +54,12 @@ export function handleTabClick<T extends LabelData>({
       return { labelData: newLabelData, chooseIndex };
     }
 
+    if (chart.labels.selectionMode === 'multiple') {
+      refreshChartWithAxis(currentIndex, chart, range, 'multiple');
+      newLabelData[currentIndex].show = !newLabelData[currentIndex].show;
+      return { labelData: newLabelData, chooseIndex };
+    }
+
     const nextChooseIndex = currentIndex === chooseIndex ? undefined : currentIndex;
     refreshChartWithAxis(nextChooseIndex, chart, range);
     if (nextChooseIndex === undefined) {

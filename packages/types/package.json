@@ -1,6 +1,6 @@
 {
   "name": "@so-chart/types",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "共享 TypeScript 类型",
   "repository": {
     "type": "git",

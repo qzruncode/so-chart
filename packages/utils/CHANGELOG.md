@@ -4,6 +4,9 @@
 
 ### Patch Changes
 
+- 为内置图例新增可选的多选显隐模式，同时保留现有单选行为作为默认值。
+- Updated dependencies
+  - @so-chart/types@2.3.0
 - be55d66: Prepare the chart packages for the public open-source distribution.
 - Updated dependencies [be55d66]
   - @so-chart/types@2.2.2

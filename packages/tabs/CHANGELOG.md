@@ -1,5 +1,17 @@
 # @so-chart/tabs
 
+## 2.1.0
+
+### Minor Changes
+
+- 为内置图例新增可选的多选显隐模式，同时保留现有单选行为作为默认值。
+
+### Patch Changes
+
+- Updated dependencies
+  - @so-chart/types@2.3.0
+  - @so-chart/utils@2.0.9
+
 ## 2.0.1
 
 ### Patch Changes
