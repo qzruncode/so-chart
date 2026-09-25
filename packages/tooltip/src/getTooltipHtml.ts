@@ -45,19 +45,25 @@ export function getTooltipHtml(params: Params) {
     return value != undefined && tooltip ? tooltip.formatter(value) : value;
   };
 
+  const tooltipItemClass = escapeTooltipHtml(styleClass.tooltipItem);
+  const tooltipLabelClass = escapeTooltipHtml(styleClass.tooltipLabel);
+  const tooltipExtraClass = escapeTooltipHtml(styleClass.tooltipExtra);
+  const tooltipRootClass = escapeTooltipHtml(`tooltip ${styleClass.tooltip} ${styleClass.tooltip}_mh_${chart.chartId}`);
+
   const items = tooltipData.reduce((html, d, i) => {
     const value = formateValue(d.data.data, d?.index ?? 0);
-    const item = `<div class=${styleClass.tooltipItem}>
+    const tooltipDotClass = escapeTooltipHtml(`${styleClass.tooltipDot} ${styleClass.tooltipDot}_bg_${i}_${chart.chartId}`);
+    const item = `<div class="${tooltipItemClass}">
       <span>
-        <span class="${styleClass.tooltipDot} ${styleClass.tooltipDot}_bg_${i}_${chart.chartId}" ></span>
-        <span class=${styleClass.tooltipLabel}> <span>${escapeTooltipHtml(d.data.label)}</span>：<span>${escapeTooltipHtml(value)}</span></span>
+        <span class="${tooltipDotClass}" ></span>
+        <span class="${tooltipLabelClass}"> <span>${escapeTooltipHtml(d.data.label)}</span>：<span>${escapeTooltipHtml(value)}</span></span>
       </span>
-      ${extra?.text ? `<span index="${i}" class=${styleClass.tooltipExtra}>${escapeTooltipHtml(extra.text)}</span>` : ''}
+      ${extra?.text ? `<span index="${escapeTooltipHtml(i)}" class="${tooltipExtraClass}">${escapeTooltipHtml(extra.text)}</span>` : ''}
     </div>`;
     return html + item;
   }, '');
   return `
-    <div class="tooltip ${styleClass.tooltip} ${styleClass.tooltip}_mh_${chart.chartId}">
+    <div class="${tooltipRootClass}">
       ${xData ? `<div class="${styleClass.tooltipTitle}">${escapeTooltipHtml(xData)}</div>` : ''}
       ${items}
     </div>
