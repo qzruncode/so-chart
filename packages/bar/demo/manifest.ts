@@ -1,6 +1,7 @@
 import type { DemoPackageManifest } from '../../../src/demo/types';
 
 const manifest = {
+  category: '2d-chart',
   packageName: '@so-chart/bar',
   title: '柱状图',
   route: 'bar',

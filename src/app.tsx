@@ -1,27 +1,30 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
-import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { MenuOutlined, MoonOutlined, NotificationOutlined, SunOutlined } from '@ant-design/icons';
+import { useEffect, useLayoutEffect, useState } from 'react';
+import { MenuOutlined, MoonOutlined, SunOutlined } from '@ant-design/icons';
 import Button from 'antd/es/button';
 import ConfigProvider from 'antd/es/config-provider';
 import Layout from 'antd/es/layout';
 import Menu from 'antd/es/menu';
+import type { MenuProps } from 'antd/es/menu';
 import theme from 'antd/es/theme';
 import { demoPackages, getFirstDemoPath, resolveDemoPackage } from './demo/registry';
+import { demoCategories } from './demo/types';
 
 const Sider = Layout.Sider;
 const Content = Layout.Content;
 
-const menus = [
-  {
-    key: 'chart',
-    icon: React.createElement(NotificationOutlined),
-    label: 'so-chart',
-    children: demoPackages.map(manifest => ({
-      key: manifest.route,
-      label: manifest.title,
-    })),
-  },
+const menus: MenuProps['items'] = [
+  ...demoCategories.map(category => ({
+    key: category.id,
+    label: category.title,
+    children: demoPackages
+      .filter(manifest => manifest.category === category.id)
+      .map(manifest => ({
+        key: manifest.route,
+        label: manifest.menuTitle ?? manifest.title,
+      })),
+  })),
 ];
 
 const App = () => {
@@ -31,7 +34,7 @@ const App = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const routeKey = location.pathname.match(/^\/chart\/([^/]+)/)?.[1];
   const chartMenuKey = resolveDemoPackage(routeKey)?.route ?? demoPackages[0]?.route ?? 'line';
-  const selectedKeys = ['chart', chartMenuKey];
+  const selectedKeys = [chartMenuKey];
 
   const toggleTheme = () => {
     setIsDark(prev => {
@@ -102,10 +105,9 @@ const App = () => {
           <Menu
             mode="inline"
             selectedKeys={selectedKeys}
-            defaultOpenKeys={['chart']}
+            defaultOpenKeys={demoCategories.map(category => category.id)}
             style={{ borderRight: 0 }}
             items={menus}
-            onClick={() => setMobileNavOpen(false)}
             onSelect={({ key }) => {
               const manifest = resolveDemoPackage(key);
               if (!manifest) return;

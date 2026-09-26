@@ -1,5 +1,6 @@
 import Markdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
+import remarkGfm from 'remark-gfm';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -192,6 +193,7 @@ function Des(props: { source: DemoContentLoader; handbook?: DemoContentLoader })
         }}
       >
         <Markdown
+          remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeHighlight]}
           components={{
             h1: ({ children }) => (

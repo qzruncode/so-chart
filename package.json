@@ -39,7 +39,10 @@
   "dependencies": {
     "@ant-design/icons": "^6.3.4",
     "@so-chart/bar": "workspace:*",
+    "@so-chart/basket": "workspace:*",
     "@so-chart/calendar": "workspace:*",
+    "@so-chart/fire": "workspace:*",
+    "@so-chart/fruit": "workspace:*",
     "@so-chart/guage": "workspace:*",
     "@so-chart/line": "workspace:*",
     "@so-chart/pie": "workspace:*",
@@ -48,6 +51,7 @@
     "@so-chart/radar": "workspace:*",
     "@so-chart/sankey": "workspace:*",
     "@so-chart/scatter3d": "workspace:*",
+    "@so-chart/table3d": "workspace:*",
     "@so-chart/tabs": "workspace:*",
     "@so-chart/tree": "workspace:*",
     "@so-chart/types": "workspace:*",
@@ -55,11 +59,12 @@
     "antd": "^6.5.4",
     "highlight.js": "^11.11.1",
     "react": "19.3.0",
-    "react-dom": "19.2.8",
+    "react-dom": "19.3.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.18.4",
     "react-syntax-highlighter": "^16.1.1",
     "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1",
     "three": "^0.186.0"
   },
   "devDependencies": {
@@ -114,8 +119,12 @@
     "packages/point",
     "packages/tree",
     "packages/calendar",
+    "packages/basket",
+    "packages/fire",
+    "packages/fruit",
     "packages/sankey",
     "packages/scatter3d",
+    "packages/table3d",
     "packages/progress"
   ]
 }

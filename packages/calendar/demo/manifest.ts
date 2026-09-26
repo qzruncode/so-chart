@@ -1,6 +1,7 @@
 import type { DemoPackageManifest } from '../../../src/demo/types';
 
 const manifest = {
+  category: '2d-chart',
   packageName: '@so-chart/calendar',
   title: '日历热点图',
   route: 'calendar',

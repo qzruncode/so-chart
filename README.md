@@ -8,6 +8,7 @@
 
 - 支持 Canvas 和 SVG 图表。
 - 支持基于 Three.js 和 WebGL 的 3D 散点图。
+- 提供蜡烛火焰、3D 桌子、藤篮和水果等实体示例。
 - 统一的 `setOption`、`resize` 和 `dispose` 生命周期。
 - 每个图表包可以独立安装和发布。
 - 提供公开的 TypeScript 类型。
@@ -59,7 +60,10 @@ export function LineChart() {
 | 包                                                                         | 说明                     |
 | -------------------------------------------------------------------------- | ------------------------ |
 | [`@so-chart/bar`](https://www.npmjs.com/package/@so-chart/bar)             | 柱状图                   |
+| [`@so-chart/basket`](https://www.npmjs.com/package/@so-chart/basket)       | PBR 3D 藤篮              |
 | [`@so-chart/calendar`](https://www.npmjs.com/package/@so-chart/calendar)   | 日历图                   |
+| [`@so-chart/fire`](https://www.npmjs.com/package/@so-chart/fire)           | 蜡烛火焰                 |
+| [`@so-chart/fruit`](https://www.npmjs.com/package/@so-chart/fruit)         | 3D 水果                  |
 | [`@so-chart/guage`](https://www.npmjs.com/package/@so-chart/guage)         | 仪表图                   |
 | [`@so-chart/line`](https://www.npmjs.com/package/@so-chart/line)           | 折线图                   |
 | [`@so-chart/pie`](https://www.npmjs.com/package/@so-chart/pie)             | 饼图                     |
@@ -68,6 +72,7 @@ export function LineChart() {
 | [`@so-chart/progress`](https://www.npmjs.com/package/@so-chart/progress)   | 进度图和滑块             |
 | [`@so-chart/radar`](https://www.npmjs.com/package/@so-chart/radar)         | 雷达图                   |
 | [`@so-chart/sankey`](https://www.npmjs.com/package/@so-chart/sankey)       | 桑基图                   |
+| [`@so-chart/table3d`](https://www.npmjs.com/package/@so-chart/table3d)     | 仿真 3D 桌子             |
 | [`@so-chart/tabs`](https://www.npmjs.com/package/@so-chart/tabs)           | 图表标签栏               |
 | [`@so-chart/tooltip`](https://www.npmjs.com/package/@so-chart/tooltip)     | Tooltip 和 mark 绘制工具 |
 | [`@so-chart/tree`](https://www.npmjs.com/package/@so-chart/tree)           | 树图和流程图             |

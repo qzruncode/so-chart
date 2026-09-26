@@ -5,6 +5,9 @@ import { defineConfig, searchForWorkspaceRoot, type UserConfig } from 'vite';
 const packageNames = [
   'bar',
   'calendar',
+  'basket',
+  'fire',
+  'fruit',
   'guage',
   'line',
   'pie',
@@ -13,6 +16,7 @@ const packageNames = [
   'radar',
   'sankey',
   'scatter3d',
+  'table3d',
   'tabs',
   'tooltip',
   'tree',
@@ -34,6 +38,7 @@ export function createPackageDemoConfig(): UserConfig {
     },
     resolve: {
       alias: packageAliases,
+      dedupe: ['three'],
     },
     optimizeDeps: {
       exclude: packageNames.map(packageName => `@so-chart/${packageName}`),

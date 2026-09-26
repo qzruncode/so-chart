@@ -1,0 +1,57 @@
+{
+  "name": "@so-chart/fire",
+  "version": "0.2.1",
+  "description": "基于 Three.js 的单根蜡烛火焰与透光蜡体组件",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/fire"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/fire.cjs",
+  "module": "./dist/fire.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/fire.js",
+      "require": "./dist/fire.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/types -F @so-chart/utils build && pnpm build"
+  },
+  "keywords": [
+    "fire",
+    "flame",
+    "candle",
+    "shader",
+    "three",
+    "webgl"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^"
+  },
+  "peerDependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@dimforge/rapier3d-compat": "^0.20.0",
+    "@so-chart/basket": "workspace:*",
+    "@so-chart/fruit": "workspace:*",
+    "@so-chart/table3d": "workspace:*",
+    "@types/three": "^0.186.0",
+    "eslint": "^10.8.1",
+    "three": "^0.186.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}

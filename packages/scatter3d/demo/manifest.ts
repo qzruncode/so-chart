@@ -1,6 +1,7 @@
 import type { DemoPackageManifest } from '../../../src/demo/types';
 
 const manifest = {
+  category: '3d-chart',
   packageName: '@so-chart/scatter3d',
   title: '3D 散点图',
   route: 'scatter3d',
