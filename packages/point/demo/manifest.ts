@@ -1,6 +1,7 @@
 import type { DemoPackageManifest } from '../../../src/demo/types';
 
 const manifest = {
+  category: '2d-chart',
   packageName: '@so-chart/point',
   title: '散点图',
   route: 'point',

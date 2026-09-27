@@ -1,4 +1,4 @@
-import type { DemoPackageManifest } from './types';
+import { demoCategories, type DemoPackageManifest } from './types';
 
 const manifestModules = import.meta.glob('../../packages/*/demo/manifest.ts', {
   eager: true,
@@ -6,8 +6,14 @@ const manifestModules = import.meta.glob('../../packages/*/demo/manifest.ts', {
 }) as Record<string, DemoPackageManifest>;
 
 function assertValidManifest(manifest: DemoPackageManifest, filePath: string) {
+  if (!demoCategories.some(category => category.id === manifest.category)) {
+    throw new Error(`Invalid demo category in ${filePath}: ${manifest.category}`);
+  }
   if (!manifest.packageName || !manifest.title || !manifest.route || !Number.isFinite(manifest.order)) {
     throw new Error(`Invalid demo manifest metadata: ${filePath}`);
+  }
+  if (manifest.menuTitle !== undefined && !manifest.menuTitle.trim()) {
+    throw new Error(`Invalid demo menu title in ${filePath}`);
   }
 
   if (manifest.sections.length === 0) {

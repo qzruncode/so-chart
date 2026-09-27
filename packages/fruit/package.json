@@ -1,0 +1,53 @@
+{
+  "name": "@so-chart/fruit",
+  "version": "0.2.0",
+  "description": "基于 Three.js 的可扩展 3D 水果图表",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/fruit"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "ASSETS.md"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/fruit.umd.cjs",
+  "module": "./dist/fruit.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/fruit.js",
+      "require": "./dist/fruit.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/types -F @so-chart/utils build && pnpm build"
+  },
+  "keywords": [
+    "fruit",
+    "3d",
+    "webgl",
+    "three",
+    "gltf"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^"
+  },
+  "peerDependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "eslint": "^10.8.1",
+    "three": "^0.186.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  }
+}
