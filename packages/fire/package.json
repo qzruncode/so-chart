@@ -44,7 +44,7 @@
     "three": "^0.186.0"
   },
   "devDependencies": {
-    "@dimforge/rapier3d-compat": "^0.20.0",
+    "@dimforge/rapier3d-compat": "^0.21.0",
     "@so-chart/basket": "workspace:*",
     "@so-chart/fruit": "workspace:*",
     "@so-chart/table3d": "workspace:*",
