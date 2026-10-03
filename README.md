@@ -8,7 +8,7 @@
 
 - 支持 Canvas 和 SVG 图表。
 - 支持基于 Three.js 和 WebGL 的 3D 散点图。
-- 提供蜡烛火焰、3D 桌子、藤篮和水果等实体示例。
+- 提供蜡烛火焰、3D 桌子、藤篮、水果、WebGL 水面和六种淡水鱼模型预览。
 - 统一的 `setOption`、`resize` 和 `dispose` 生命周期。
 - 每个图表包可以独立安装和发布。
 - 提供公开的 TypeScript 类型。
@@ -55,6 +55,8 @@ export function LineChart() {
 
 组件卸载或重新创建图表前，请调用 `dispose()` 释放资源。
 
+`@so-chart/water` 提供 Water2 WebGL 水面与交互控制，`@so-chart/fish` 提供六种淡水鱼模型和独立动画。示例路由为 `/chart/water/basic` 和 `/chart/fish/basic`；当前鱼模型仍未达到写实验收标准。
+
 ## 包列表
 
 | 包                                                                         | 说明                     |
@@ -62,6 +64,7 @@ export function LineChart() {
 | [`@so-chart/bar`](https://www.npmjs.com/package/@so-chart/bar)             | 柱状图                   |
 | [`@so-chart/basket`](https://www.npmjs.com/package/@so-chart/basket)       | PBR 3D 藤篮              |
 | [`@so-chart/calendar`](https://www.npmjs.com/package/@so-chart/calendar)   | 日历图                   |
+| [`@so-chart/fish`](https://www.npmjs.com/package/@so-chart/fish) | 六种淡水鱼模型预览 |
 | [`@so-chart/fire`](https://www.npmjs.com/package/@so-chart/fire)           | 蜡烛火焰                 |
 | [`@so-chart/fruit`](https://www.npmjs.com/package/@so-chart/fruit)         | 3D 水果                  |
 | [`@so-chart/guage`](https://www.npmjs.com/package/@so-chart/guage)         | 仪表图                   |
@@ -78,6 +81,8 @@ export function LineChart() {
 | [`@so-chart/tree`](https://www.npmjs.com/package/@so-chart/tree)           | 树图和流程图             |
 | [`@so-chart/types`](https://www.npmjs.com/package/@so-chart/types)         | 共享 TypeScript 类型     |
 | [`@so-chart/utils`](https://www.npmjs.com/package/@so-chart/utils)         | 共享工具                 |
+
+| [`@so-chart/water`](https://www.npmjs.com/package/@so-chart/water) | Water2 WebGL 水面 |
 
 `@so-chart/guage` 的包名保留现有拼写。
 

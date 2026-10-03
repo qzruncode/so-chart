@@ -1,0 +1,48 @@
+{
+  "status": "unaccepted authored candidates",
+  "notice": "See ASSETS.md and THIRD_PARTY_NOTICES.md; code ISC does not replace retained derivative-material licenses.",
+  "fish": [
+    {
+      "file": "black-carp.glb",
+      "stage": "head-correction-native-v7",
+      "sha256": "dc6145cb2b97c5ee1db5e400c9c7f77823969e07fd8be4afa8439018741e25bc",
+      "accepted": false,
+      "retained_asset_license": "authored model; USFWS public-domain reference credits retained"
+    },
+    {
+      "file": "grass-carp.glb",
+      "stage": "native-seam-eye-v13",
+      "sha256": "73b2945d04262f9ad2681d9fceb64bd40d1c57c08b982b363dc62af99d84327a",
+      "accepted": false,
+      "retained_asset_license": "authored model; USFWS public-domain reference credits retained"
+    },
+    {
+      "file": "silver-carp.glb",
+      "stage": "shape-correction-native-v7",
+      "sha256": "3c8884bafdcd2c4cfee5e9b748297a1fabd7c9c81e0285068734a63cfabf772a",
+      "accepted": false,
+      "retained_asset_license": "authored model; USFWS public-domain reference credits retained"
+    },
+    {
+      "file": "bighead-carp.glb",
+      "stage": "shape-correction-native-v7",
+      "sha256": "06e8415e968dd31aaf80130d0de700b347d40f8c7caac75eac0a08c9d1fc29ad",
+      "accepted": false,
+      "retained_asset_license": "CC-BY attribution retained"
+    },
+    {
+      "file": "common-carp.glb",
+      "stage": "shape-correction-native-v7",
+      "sha256": "121a0f5477b32f2518ce5ab3d9dfb8a5c329d7829f1c8b3adac034ff66d351c1",
+      "accepted": false,
+      "retained_asset_license": "CC-BY-SA-3.0"
+    },
+    {
+      "file": "crucian-carp.glb",
+      "stage": "shape-correction-native-v7",
+      "sha256": "f1ceaea5ea7f09f95c751a1f29b69d85c7e9da66e2689c9e6499440f2b6f9729",
+      "accepted": false,
+      "retained_asset_license": "CC-BY attribution retained"
+    }
+  ]
+}

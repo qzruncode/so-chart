@@ -1,0 +1,62 @@
+{
+  "name": "@so-chart/fish",
+  "version": "0.2.0",
+  "description": "Photo-referenced Blender GLB models of common Chinese freshwater fish for Three.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/fish"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "ASSETS.md",
+    "THIRD_PARTY_NOTICES.md",
+    "demo/docs",
+    "LICENSE",
+    "ASSET_MANIFEST.json"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/fish.cjs",
+  "module": "./dist/fish.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/fish.js",
+      "import": "./dist/fish.js",
+      "require": "./dist/fish.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite -c vite.dev.ts",
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/types -F @so-chart/utils build && pnpm build"
+  },
+  "keywords": [
+    "fish",
+    "3d",
+    "webgl",
+    "three",
+    "freshwater"
+  ],
+  "author": "ye",
+  "license": "ISC",
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^"
+  },
+  "peerDependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "eslint": "^10.8.1",
+    "three": "^0.186.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "browser": "./dist/fish.js"
+}

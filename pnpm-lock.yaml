@@ -23,6 +23,9 @@ importers:
       '@so-chart/fire':
         specifier: workspace:*
         version: link:packages/fire
+      '@so-chart/fish':
+        specifier: workspace:*
+        version: link:packages/fish
       '@so-chart/fruit':
         specifier: workspace:*
         version: link:packages/fruit
@@ -62,6 +65,9 @@ importers:
       '@so-chart/types':
         specifier: workspace:*
         version: link:packages/types
+      '@so-chart/water':
+        specifier: workspace:*
+        version: link:packages/water
       '@types/react-syntax-highlighter':
         specifier: ^15.5.13
         version: 15.5.13
@@ -301,6 +307,31 @@ importers:
       vite:
         specifier: ^8.2.1
         version: 8.2.1(@types/node@26.2.0)(esbuild@0.27.2)(jiti@2.6.1)(less@4.9.1)(yaml@2.9.1)
+
+  packages/fish:
+    dependencies:
+      '@so-chart/types':
+        specifier: workspace:^
+        version: link:../types
+      '@so-chart/utils':
+        specifier: workspace:^
+        version: link:../utils
+    devDependencies:
+      '@types/three':
+        specifier: ^0.186.0
+        version: 0.186.0
+      eslint:
+        specifier: ^10.8.1
+        version: 10.8.1(jiti@2.6.1)
+      three:
+        specifier: ^0.186.0
+        version: 0.186.0
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^8.2.1
+        version: 8.2.1(@types/node@26.2.0)(esbuild@0.27.2)(jiti@2.6.1)(less@4.8.1)(yaml@2.9.0)
 
   packages/fruit:
     dependencies:
@@ -781,6 +812,34 @@ importers:
       vite:
         specifier: ^8.2.1
         version: 8.2.1(@types/node@26.2.0)(esbuild@0.27.2)(jiti@2.6.1)(less@4.9.1)(yaml@2.9.1)
+
+  packages/water:
+    dependencies:
+      '@so-chart/types':
+        specifier: workspace:^
+        version: link:../types
+      '@so-chart/utils':
+        specifier: workspace:^
+        version: link:../utils
+    devDependencies:
+      '@so-chart/fish':
+        specifier: workspace:^
+        version: link:../fish
+      '@types/three':
+        specifier: ^0.186.0
+        version: 0.186.0
+      eslint:
+        specifier: ^10.8.1
+        version: 10.8.1(jiti@2.6.1)
+      three:
+        specifier: ^0.186.0
+        version: 0.186.0
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^8.2.1
+        version: 8.2.1(@types/node@26.2.0)(esbuild@0.27.2)(jiti@2.6.1)(less@4.8.1)(yaml@2.9.0)
 
 packages:
 
