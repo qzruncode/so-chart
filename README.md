@@ -64,7 +64,7 @@ export function LineChart() {
 | [`@so-chart/bar`](https://www.npmjs.com/package/@so-chart/bar)             | 柱状图                   |
 | [`@so-chart/basket`](https://www.npmjs.com/package/@so-chart/basket)       | PBR 3D 藤篮              |
 | [`@so-chart/calendar`](https://www.npmjs.com/package/@so-chart/calendar)   | 日历图                   |
-| [`@so-chart/fish`](https://www.npmjs.com/package/@so-chart/fish) | 六种淡水鱼模型预览 |
+| [`@so-chart/fish`](https://www.npmjs.com/package/@so-chart/fish)           | 六种淡水鱼模型预览       |
 | [`@so-chart/fire`](https://www.npmjs.com/package/@so-chart/fire)           | 蜡烛火焰                 |
 | [`@so-chart/fruit`](https://www.npmjs.com/package/@so-chart/fruit)         | 3D 水果                  |
 | [`@so-chart/guage`](https://www.npmjs.com/package/@so-chart/guage)         | 仪表图                   |
