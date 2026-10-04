@@ -42,6 +42,7 @@
     "@so-chart/basket": "workspace:*",
     "@so-chart/calendar": "workspace:*",
     "@so-chart/fire": "workspace:*",
+    "@so-chart/fish": "workspace:*",
     "@so-chart/fruit": "workspace:*",
     "@so-chart/guage": "workspace:*",
     "@so-chart/line": "workspace:*",
@@ -52,6 +53,7 @@
     "@so-chart/sankey": "workspace:*",
     "@so-chart/scatter3d": "workspace:*",
     "@so-chart/table3d": "workspace:*",
+    "@so-chart/water": "workspace:*",
     "@so-chart/tabs": "workspace:*",
     "@so-chart/tree": "workspace:*",
     "@so-chart/types": "workspace:*",
@@ -121,10 +123,12 @@
     "packages/calendar",
     "packages/basket",
     "packages/fire",
+    "packages/fish",
     "packages/fruit",
     "packages/sankey",
     "packages/scatter3d",
     "packages/table3d",
+    "packages/water",
     "packages/progress"
   ]
 }

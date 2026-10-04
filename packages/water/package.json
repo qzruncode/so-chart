@@ -1,0 +1,53 @@
+{
+  "name": "@so-chart/water",
+  "version": "0.2.0",
+  "description": "基于 Three.js Water2 的 WebGL 水面图表",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qzruncode/so-chart.git",
+    "directory": "packages/water"
+  },
+  "type": "module",
+  "main": "./dist/water.cjs",
+  "module": "./dist/water.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/water.js",
+      "import": "./dist/water.js",
+      "require": "./dist/water.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "THIRD_PARTY_NOTICES.md",
+    "demo/docs",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "vite build -c vite.prod.ts && tsc",
+    "build:dev": "pnpm -F @so-chart/utils -F @so-chart/types build && pnpm build",
+    "dev": "vite --config vite.dev.ts"
+  },
+  "dependencies": {
+    "@so-chart/types": "workspace:^",
+    "@so-chart/utils": "workspace:^"
+  },
+  "peerDependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "eslint": "^10.8.1",
+    "three": "^0.186.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1",
+    "@so-chart/fish": "workspace:^"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "browser": "./dist/water.js"
+}

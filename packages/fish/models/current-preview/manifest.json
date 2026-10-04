@@ -1,0 +1,74 @@
+{
+  "status": "unaccepted working candidates",
+  "original_assets_preserved": true,
+  "fish": [
+    {
+      "species": "black-carp",
+      "stage": "head-correction-native-v7",
+      "appearance": "color PBR candidate",
+      "accepted": false,
+      "source_file": "black-carp.blend",
+      "source_sha256": "468cf5257f5a23b95b35cf0818c0da8dac86093d12d731523de58d75757e7f40",
+      "glb_sha256": "dc6145cb2b97c5ee1db5e400c9c7f77823969e07fd8be4afa8439018741e25bc",
+      "skin_joint_counts": [9],
+      "animation_count": 1
+    },
+    {
+      "species": "grass-carp",
+      "stage": "native-seam-eye-v13",
+      "appearance": "color PBR candidate",
+      "accepted": false,
+      "source_file": "grass-carp.blend",
+      "source_sha256": "e57800a563203d62a35d7bc5be0077679961c35cc6fddb6b83f4eccabd38ecfb",
+      "glb_sha256": "73b2945d04262f9ad2681d9fceb64bd40d1c57c08b982b363dc62af99d84327a",
+      "skin_joint_counts": [9],
+      "animation_count": 1
+    },
+    {
+      "species": "silver-carp",
+      "stage": "shape-correction-native-v7",
+      "appearance": "color PBR candidate",
+      "accepted": false,
+      "source_file": "silver-carp.blend",
+      "source_sha256": "8bbff65095656c9e41606623b775f3ec577be798c4844809813cb8c804ba7200",
+      "glb_sha256": "3c8884bafdcd2c4cfee5e9b748297a1fabd7c9c81e0285068734a63cfabf772a",
+      "skin_joint_counts": [9],
+      "animation_count": 1
+    },
+    {
+      "species": "bighead-carp",
+      "stage": "shape-correction-native-v7",
+      "appearance": "color PBR candidate",
+      "accepted": false,
+      "source_file": "bighead-carp.blend",
+      "source_sha256": "c15abc5c4b5973f12b8d05f1fed144fca20a0960c29895890afe9fc1c83de4a0",
+      "glb_sha256": "06e8415e968dd31aaf80130d0de700b347d40f8c7caac75eac0a08c9d1fc29ad",
+      "skin_joint_counts": [9],
+      "animation_count": 1
+    },
+    {
+      "species": "common-carp",
+      "stage": "shape-correction-native-v7",
+      "appearance": "color PBR candidate",
+      "accepted": false,
+      "source_file": "common-carp.blend",
+      "source_sha256": "8e60ab5fbd59a6611961cf075a9cc73487a3adcd51b056a4cadbcc83f84f0fb4",
+      "glb_sha256": "121a0f5477b32f2518ce5ab3d9dfb8a5c329d7829f1c8b3adac034ff66d351c1",
+      "skin_joint_counts": [9],
+      "animation_count": 1
+    },
+    {
+      "species": "crucian-carp",
+      "stage": "shape-correction-native-v7",
+      "appearance": "color PBR candidate",
+      "accepted": false,
+      "source_file": "crucian-carp.blend",
+      "source_sha256": "cf259615234c4782b9f91d5b0257d4967109f93f328dfef6e3dde289329b280c",
+      "glb_sha256": "f1ceaea5ea7f09f95c751a1f29b69d85c7e9da66e2689c9e6499440f2b6f9729",
+      "skin_joint_counts": [9],
+      "animation_count": 1,
+      "taxon": "Carassius auratus",
+      "scale_columns_are_author_choice": true
+    }
+  ]
+}

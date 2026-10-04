@@ -7,6 +7,7 @@ const packageNames = [
   'calendar',
   'basket',
   'fire',
+  'fish',
   'fruit',
   'guage',
   'line',
@@ -17,6 +18,7 @@ const packageNames = [
   'sankey',
   'scatter3d',
   'table3d',
+  'water',
   'tabs',
   'tooltip',
   'tree',
@@ -41,7 +43,7 @@ export function createPackageDemoConfig(): UserConfig {
       dedupe: ['three'],
     },
     optimizeDeps: {
-      exclude: packageNames.map(packageName => `@so-chart/${packageName}`),
+      exclude: [...packageNames.map(packageName => `@so-chart/${packageName}`), 'three'],
     },
     server: {
       fs: {
